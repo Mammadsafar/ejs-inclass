@@ -1,0 +1,258 @@
+/* body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: black;
+  }
+  
+  .deconstructed {
+    position: relative;
+    margin: auto;
+    height: 0.71em;
+    color: transparent;
+    font-family: 'Cambay', sans-serif;
+    font-size: 10vw;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.03em;
+  }
+  
+  .deconstructed > div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: #ffff64;
+    pointer-events: none;
+  }
+  
+  .deconstructed > div:nth-child(1) {
+    -webkit-mask-image: linear-gradient(black 25%, transparent 25%);
+    mask-image: linear-gradient(black 25%, transparent 25%);
+    animation: deconstructed1 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(2) {
+    -webkit-mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    mask-image: linear-gradient(transparent 25%, black 25%, black 50%, transparent 50%);
+    animation: deconstructed2 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(3) {
+     -webkit-mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    mask-image: linear-gradient(transparent 50%, black 50%, black 75%, transparent 75%);
+    animation: deconstructed3 5s infinite;
+  }
+  
+  .deconstructed > div:nth-child(4) {
+     -webkit-mask-image: linear-gradient(transparent 75%, black 75%);
+    mask-image: linear-gradient(transparent 75%, black 75%);
+    animation: deconstructed4 5s infinite;
+  }
+  
+  @keyframes deconstructed1 {
+    0% {
+      transform: translateX(100%);
+    }
+    26% {
+      transform: translateX(0%);
+    }
+    83% {
+      transform: translateX(-0.1%);
+    }
+    100% {
+      transform: translateX(-120%);
+    }
+  }
+  
+  @keyframes deconstructed2 {
+    0% {
+      transform: translateX(100%);
+    }
+    24% {
+      transform: translateX(0.5%);
+    }
+    82% {
+      transform: translateX(-0.2%);
+    }
+    100% {
+      transform: translateX(-125%);
+    }
+  }
+  
+  @keyframes deconstructed3 {
+    0% {
+      transform: translateX(100%);
+    }
+    22% {
+      transform: translateX(0%);
+    }
+    81% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-130%);
+    }
+  }
+  
+  @keyframes deconstructed4 {
+    0% {
+      transform: translateX(100%);
+    }
+    20% {
+      transform: translateX(0%);
+    }
+    80% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-135%);
+    }
+  } */
+
+
+@font-face {
+    font-family: Clip;
+    src: url("https://acupoftee.github.io/fonts/Clip.ttf");
+}
+
+body {
+    background-color: #141114;
+    background-image: linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px),
+        linear-gradient(335deg, black 23px, transparent 23px),
+        linear-gradient(155deg, black 23px, transparent 23px);
+    background-size: 58px 58px;
+    background-position: 0px 2px, 4px 35px, 29px 31px, 34px 6px;
+}
+
+.sign {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 50%;
+    background-image: radial-gradient(ellipse 50% 35% at 50% 50%,
+            #6b1839,
+            transparent);
+    transform: translate(-50%, -50%);
+    letter-spacing: 2;
+    left: 50%;
+    top: 50%;
+    font-family: "Clip";
+    text-transform: uppercase;
+    font-size: 6em;
+    color: #ffe6ff;
+    text-shadow: 0 0 0.6rem #ffe6ff, 0 0 1.5rem #ff65bd,
+        -0.2rem 0.1rem 1rem #ff65bd, 0.2rem 0.1rem 1rem #ff65bd,
+        0 -0.5rem 2rem #ff2483, 0 0.5rem 3rem #ff2483;
+    animation: shine 2s forwards, flicker 3s infinite;
+}
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700,900,400italic,700italic,900italic);
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fdf9fd;
+    color: #011a32;
+    font: 16px/1.25 'Raleway', sans-serif;
+    text-align: center;
+}
+
+#wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80em;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    float: left;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1em;
+    width: 100%;
+}
+
+h1 {
+    animation: text-shadow 1.5s ease-in-out infinite;
+    font-size: 5em;
+    font-weight: 900;
+    line-height: 1;
+}
+
+h1:hover {
+    animation-play-state: paused;
+}
+
+a {
+    color: #024794;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@keyframes text-shadow {
+    0% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+
+    20% {
+        transform: translateY(-1em);
+        text-shadow:
+            0 0.125em 0 #0c2ffb,
+            0 0.25em 0 #2cfcfd,
+            0 -0.125em 0 #fb203b,
+            0 -0.25em 0 #fefc4b;
+    }
+
+    40% {
+        transform: translateY(0.5em);
+        text-shadow:
+            0 -0.0625em 0 #0c2ffb,
+            0 -0.125em 0 #2cfcfd,
+            0 0.0625em 0 #fb203b,
+            0 0.125em 0 #fefc4b;
+    }
+
+    60% {
+        transform: translateY(-0.25em);
+        text-shadow:
+            0 0.03125em 0 #0c2ffb,
+            0 0.0625em 0 #2cfcfd,
+            0 -0.03125em 0 #fb203b,
+            0 -0.0625em 0 #fefc4b;
+    }
+
+    80% {
+        transform: translateY(0);
+        text-shadow:
+            0 0 0 #0c2ffb,
+            0 0 0 #2cfcfd,
+            0 0 0 #fb203b,
+            0 0 0 #fefc4b;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
